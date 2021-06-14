@@ -1,0 +1,26 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Кликер Pudge </title>
+  </head>
+  <body>
+    <header><h3>Свежее мясо (Регистрация)</h3></header>
+    <main>
+    <div align="center">
+      <form method="post" action="{% url 'registration' %}">
+        {%csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="SIGN UP">
+        </form>
+        {% if invalid%}
+       <p>Данное имя пользователя уже используется! Пожалуйста, выберите другое!</p>
+       {% endif %}
+    </div>
+    <br>
+    <div align="center"><a href="/login">Время нарезать </a></div>
+  </main>
+  </body>
+</html>

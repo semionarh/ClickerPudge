@@ -1,0 +1,62 @@
+.pudge{
+    text-align:center;
+    height: 600px;
+    width: 620px;
+    position: absolute;
+    top: 100px;
+}
+
+h3{
+    font-family: 'fantasy', cursive;
+    position: relative;
+    padding-left: 60px;
+}
+
+body {
+    background: url(fone.jpg) no-repeat center;
+    background-image: url(../images/fone.jpg);
+}
+
+.logout{
+    padding-left: 60px;
+    font-size: 30px;
+}
+
+.catgirl{
+  opacity: 0.7;
+}
+
+.catgirl:hover{
+  opacity: 0.8;
+}
+
+.catgirl:active{
+  opacity: 1;
+}
+
+.catgirl:disabled{
+  opacity: 0.3;
+}
+
+.boost{
+  height: 150px;
+  width: 150px;
+}
+
+.boost-wrapper{
+  display: flex;
+   flex-direction: row;
+   flex: 1;
+   flex-wrap: wrap
+}
+
+.boost-holder{
+  width: 320px;
+  height: 500px;
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+}

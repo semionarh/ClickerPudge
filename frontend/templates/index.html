@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="{% static 'js/index.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="utf-8">
+    <div>
+      <title >Кликер Pudge </title>
+    </div>
+  </head>
+  <body onload="getUser({{user.id}})">
+     <main>
+
+      <div align='left'>
+        <h3 style="font-size:40px; color:red"> Привет, <div id="user">%user%<div/> ! </h3>
+        <h3 style="font-size:30px; color:red;">У тебя <div id="data">%coins%</div> успешных хуков </h3>
+        <h3 style="font-size:30px; color:red";> Длина твоего хука <div id="click_power">%clickPower%</div> </h3>
+        <h3 style="font-size:30px; color:red;"> Автохук <div id="auto_click_power"> {{mainCycle.autoClickPower}} </div> крипов в секунду </h3>
+        <div class="logout"><a href="/logout">ВЫХОД</a></div>
+      </div>
+        <div align='center'>
+        <input type="image" class="pudge catgirl" src="{% static 'images/pudge.png' %}" onclick="callClick()" />
+        </div>
+        <div class="boost-wrapper" id="boost-wrapper">
+        </div>
+
+    </main>
+  </body>
+</html>
